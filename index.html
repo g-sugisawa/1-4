@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課題①-4
+  </title>
+</head>
+<body>
+<script>
+//最初の段階でコンソールにタスク一覧が表示されている
+//タスクには内容とジャンルがあり、各々表示される
+//タスクを入力することができる
+//ジャンルを入力することができる
+//タスクとジャンルが入力されると追加され、表示される
+  const task =  prompt("タスクを入力してください");
+    if(task){
+       task1 = prompt("ジャンルを入力してください");
+        alert("新しいタスクを追加しました。")
+    } else {
+    }   
+  const list = {
+        contents: "[内容]",
+        genres: "[ジャンル]",
+  }
+  tasks = [
+  {
+    content: '机を片付ける',
+    genre: '掃除'
+  },
+  {
+    content: '牛乳を買う',
+    genre: '買い物'
+  },
+  {
+    content: '"散歩する',
+    genre: '運動'
+  },
+  ];
+  console.log("==========================");
+  console.log("現在持っているタスクの一覧");
+  console.log("==========================");
+  tasks.forEach(element => 
+  {
+    console.log((list.contents),(element.content),(list.genres),(element.genre));
+  });
+  console.log("==========================");
+  console.log("現在持っているタスクの一覧");
+  console.log("==========================");
+  tasks.push({content:task,genre:task1});    
+  tasks.forEach(element => 
+  {
+    console.log((list.contents),(element.content),(list.genres),(element.genre));
+  });
+</script>
+</body>
+</html>
