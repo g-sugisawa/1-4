@@ -13,35 +13,41 @@
 //タスクを入力することができる
 //ジャンルを入力することができる
 //タスクとジャンルが入力されると追加され、表示される
-
-  const todo =  prompt("タスクを入力してください");
-    if(todo){
-       genre = prompt("ジャンルを入力してください");
-        alert("新しいタスクを追加しました。")
-    } else {
-    }   
+  const task =  prompt("タスクを入力してください");
+    if(task){
+       task1 = prompt("ジャンルを入力してください");
+        alert("新しいタスクを追加しました。");
+    } 
   const list = {
-        a: "[内容]",
-        b: "[ジャンル]",
+        contents: "[内容]",
+        genres: "[ジャンル]",
+        tasklist:"==========================\n現在持っているタスクの一覧\n=========================="
   }
-  console.log("==========================");
-  console.log("現在持っているタスクの一覧");
-  console.log("==========================");
-  const array = ["机を片付ける", "牛乳を買う", "散歩する"];
-  const array1 = ["掃除","買い物","運動"];
-  console.log((list.a),array[0],(list.b),array1[0]); 
-  console.log((list.a),array[1],(list.b),array1[1]); 
-  console.log((list.a),array[2],(list.b),array1[2]);
-  console.log("==========================");
-  console.log("現在持っているタスクの一覧");
-  console.log("==========================");
-  array.push(todo);
-  array1.push(genre);
-  console.log((list.a),array[0],(list.b),array1[0]); 
-  console.log((list.a),array[1],(list.b),array1[1]); 
-  console.log((list.a),array[2],(list.b),array1[2]);
-  console.log((list.a),array[3],(list.b),array1[3]);
-  
+  tasks = [
+  {
+    content: '机を片付ける',
+    genre: '掃除'
+  },
+  {
+    content: '牛乳を買う',
+    genre: '買い物'
+  },
+  {
+    content: '"散歩する',
+    genre: '運動'
+  },
+  ];
+  console.log(list.tasklist);
+  tasks.forEach(element => 
+  {
+    console.log((list.contents),(element.content),(list.genres),(element.genre));
+  });
+  tasks.push({content:task,genre:task1});  
+  console.log(list.tasklist);  
+  tasks.forEach(element => 
+  {
+    console.log((list.contents),(element.content),(list.genres),(element.genre));
+  });
 </script>
 </body>
 </html>
